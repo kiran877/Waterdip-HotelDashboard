@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetchData from './hooks/useFetchData';
+import TimeSeriesChart from './components/TimeSeriesChart'; // Adjust the path as necessary
 
 const App = () => {
     const { data, loading, error } = useFetchData('/hotel_bookings_1000.csv'); 
@@ -9,8 +10,8 @@ const App = () => {
 
     return (
         <div>
-            <h1>Fetched CSV Data</h1>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            {/* Add the TimeSeriesChart component here */}
+            <TimeSeriesChart url="/hotel_bookings_1000.csv" />
         </div>
     );
 };
