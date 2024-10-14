@@ -12,7 +12,7 @@ const TimeSeriesChart = ({ url }) => {
             const response = await axios.get(url);
             const parsedData = Papa.parse(response.data, { header: true }).data;
 
-            // Process data for time series chart
+           
             const visitorsPerDay = {};
 
             parsedData.forEach(row => {
@@ -39,7 +39,7 @@ const TimeSeriesChart = ({ url }) => {
 
     return (
         <div>
-            <h2>Time Series: Number of Visitors per Day</h2>
+            <h2>Number of Visitors per Day</h2>
             <Chart
                 options={{
                     xaxis: {
